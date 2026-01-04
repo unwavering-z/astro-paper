@@ -2,8 +2,8 @@
 author: Sat Naing
 pubDatetime: 2022-09-23T04:58:53Z
 modDatetime: 2025-03-20T03:15:57.792Z
-title: How to configure AstroPaper theme
-slug: how-to-configure-astropaper-theme
+title: 如何配置 AstroPaper 主题
+slug: 如何配置 AstroPaper 主题
 featured: true
 draft: false
 tags:
@@ -12,15 +12,15 @@ tags:
 description: How you can make AstroPaper theme absolutely yours.
 ---
 
-AstroPaper is a highly customizable Astro blog theme. With AstroPaper, you can customize everything according to your personal taste. This article will explain how you can make some customizations easily in the config file.
+AstroPaper 是一款高度可定制的天文博客主题。使用 AstroPaper，您可以根据个人喜好自定义所有内容。本文将介绍如何在配置文件中轻松进行一些自定义设置。
 
-## Table of contents
+## 目录
 
-## Configuring SITE
+## 配置站点
 
-The important configurations resides in `src/config.ts` file. Within that file, you'll see the `SITE` object where you can specify your website's main configurations.
+重要的配置信息都保存在src/config.ts一个文件中。在该文件中，你会看到一个SITE对象，你可以在其中指定网站的主要配置。
 
-During development, it's okay to leave `SITE.website` empty. But in production mode, you should specify your deployed url in `SITE.website` option since this will be used for canonical URL, social card URL etc.. which are important for SEO.
+开发阶段可以留空SITE.website。但在生产环境中，您应该在选项中指定已部署的 URL，SITE.website因为它将用于规范 URL、社交媒体卡片 URL 等，这些对 SEO 至关重要。
 
 ```js file=src/config.ts
 export const SITE = {
@@ -48,18 +48,19 @@ export const SITE = {
 } as const;
 ```
 
-Here are SITE configuration options
+以下是站点配置选项
 
-| Options               | Description                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 选项              | 描述                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `website`             | Your deployed website URL                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `author`              | Your name                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `profile`             | Your personal/portfolio website URL which is used for better SEO. Put `null` or empty string `""` if you don't have any.                                                                                                                                                                                                                                                                                                          |
-| `desc`                | Your site description. Useful for SEO and social media sharing.                                                                                                                                                                                                                                                                                                                                                                   |
-| `title`               | Your site name                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `ogImage`             | Your default OG image for the site. Useful for social media sharing. OG images can be an external image URL or they can be placed under `/public` directory.                                                                                                                                                                                                                                                                      |
-| `lightAndDarkMode`    | Enable or disable `light & dark mode` for the website. If disabled, primary color scheme will be used. This option is enabled by default.                                                                                                                                                                                                                                                                                         |
-| `postPerIndex`        | The number of posts to be displayed at the home page under `Recent` section.                                                                                                                                                                                                                                                                                                                                                      |
+| `website`             | 您已部署的网站 URL                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `author`              | 你的名字                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `profile`             | 您的个人/作品集网站网址，用于提升搜索引擎优化效果。如果没有网站，请填写null空字符串。""   |                                                                                                                                                               |
+
+| `desc`                | 您的网站描述。有助于搜索引擎优化和社交媒体分享。                                                                                                                                                                                                                                                                                                                                                                   |
+| `title`               | 您的网站名称                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `ogImage`             |网站的默认 OG 图片。方便在社交媒体上分享。OG 图片可以是外部图片 URL，也可以放置在/public目录下。                                                                                                                                                                                                                                                                      |
+| `lightAndDarkMode`    |启用或禁用light & dark mode此功能。如果禁用，将使用网站默认的主配色方案。此选项默认启用。                                                                                                                                                                                                                                                                                        |
+| `postPerIndex`        |首页该版块下要显示的帖子数量Recent。                                                                                                                                                                                                                                                                                                                                                     |
 | `postPerPage`         | You can specify how many posts will be displayed in each posts page. (eg: if you set `SITE.postPerPage` to 3, each page will only show 3 posts per page)                                                                                                                                                                                                                                                                          |
 | `scheduledPostMargin` | In Production mode, posts with a future `pubDatetime` will not be visible. However, if a post's `pubDatetime` is within the next 15 minutes, it will be visible. You can set `scheduledPostMargin` if you don't like the default 15 minutes margin.                                                                                                                                                                               |
 | `showArchives`        | Determines whether to display the `Archives` menu (positioned between the `About` and `Search` menus) and its corresponding page on the site. This option is set to `true` by default.                                                                                                                                                                                                                                            |
