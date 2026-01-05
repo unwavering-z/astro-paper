@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "About"
+title: "关于"
 ---
 
 AstroPaper 是一款简洁、易用且对搜索引擎友好的博客主题，它基于以下方式构建：[Astro](https://astro.build/) 和 [Tailwind CSS](https://tailwindcss.com/).
@@ -32,6 +32,6 @@ AstroPaper 具备一系列实用功能，使内容发布变得轻松高效：
 
 发现 bug 🐛 或有改进建议 ✨？欢迎随时提交 bug 报告 [issue](https://github.com/satnaing/astro-paper/issues), 提交 [pull request](https://github.com/satnaing/astro-paper/pulls) 或者开始[discussion](https://github.com/satnaing/astro-paper/discussions).
 
-如果您觉得这个主题有用，您也可以[在 GitHub 上赞助我](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
+如果您觉得这个主题有用，您也可以[在 GitHub 上赞助我](https://github.com/sponsors/satnaing) or [给我买一杯咖啡](https://buymeacoffee.com/satnaing) 表达您的支持——每一分钱都很重要。
 
 Kyay zuu! 🙏🏼
