@@ -2,13 +2,13 @@
 author: Alberto Perdomo
 pubDatetime: 2024-09-08T20:58:52.737Z
 modDatetime: 2025-03-22T09:25:46.734Z
-title: How to add LaTeX Equations in Astro blog posts
+title: 如何在天文博客文章中添加 LaTeX 公式
 tags:
   - docs
-description: Learn how to add LaTeX equations in Astro blog posts using Markdown, KaTeX, and remark/rehype plugins.
+description: 学习如何使用 Markdown、KaTeX 和 remark/rehype 插件在 Astro 博客文章中添加 LaTeX 公式。
 ---
 
-This document demonstrates how to use LaTeX equations in your Markdown files for AstroPaper. LaTeX is a powerful typesetting system often used for mathematical and scientific documents.
+本文档演示如何在 AstroPaper 的 Markdown 文件中使用 LaTeX 公式。LaTeX 是一种功能强大的排版系统，常用于数学和科学文档。
 
 <figure>
   <img
@@ -20,19 +20,19 @@ This document demonstrates how to use LaTeX equations in your Markdown files for
   </figcaption>
 </figure>
 
-## Table of contents
+## 目录
 
-## Instructions
+## 指示
 
-In this section, you will find instructions on how to add support for LaTeX in your Markdown files for AstroPaper.
+在本节中，您将找到有关如何在 AstroPaper 的 Markdown 文件中添加 LaTeX 支持的说明。
 
-1. Install the necessary remark and rehype plugins by running:
+1.运行以下命令安装必要的 remark 和 rehype 插件：
 
    ```bash
    pnpm install rehype-katex remark-math katex
    ```
 
-2. Update the Astro configuration to use the these plugins:
+2. 更新 Astro 配置以使用以下插件：
 
    ```ts file=astro.config.ts
    // ...
@@ -58,7 +58,7 @@ In this section, you will find instructions on how to add support for LaTeX in y
    });
    ```
 
-3. Import KaTeX CSS in the main layout file
+3.在主布局文件中导入 KaTeX CSS
 
    ```astro file=src/layouts/Layout.astro
    ---
@@ -82,7 +82,7 @@ In this section, you will find instructions on how to add support for LaTeX in y
    </body>
    ```
 
-4. As the last step, add a text-color for `katex` in `typography.css`.
+4. 最后一步，在 `typography.css` 中为 `katex` 添加文本颜色。
 
    ```css file=src/styles/typography.css
    @plugin "@tailwindcss/typography";
@@ -101,25 +101,23 @@ In this section, you will find instructions on how to add support for LaTeX in y
    }
    ```
 
-And _voilà_, this setup allows you to write LaTeX equations in your Markdown files, which will be rendered properly when the site is built. Once you do it, the rest of the document will appear rendered correctly.
+瞧！这样设置后，你就可以在 Markdown 文件中编写 LaTeX 公式了，网站构建时这些公式就能正确渲染。完成设置后，文档的其余部分也会正确显示。
 
 ---
 
-## Inline Equations
+## 内联方程
 
-Inline equations are written between single dollar signs `$...$`. Here are some examples:
-
-1. The famous mass-energy equivalence formula: `$E = mc^2$`
-2. The quadratic formula: `$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$`
-3. Euler's identity: `$e^{i\pi} + 1 = 0$`
+行内公式写在单个美元符号 `$...$` 之间。以下是一些示例：
+1. 著名的质能等价公式：`$E = mc^2$`
+2. 二次方程求根公式：`$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$`
+3. 欧拉恒等式：`$e^{i\pi} + 1 = 0$`
 
 ---
 
-## Block Equations
+## 块方程
+对于更复杂的公式，或者当您希望公式单独显示一行时，请使用双美元符号 `$$...$$`：
 
-For more complex equations or when you want the equation to be displayed on its own line, use double dollar signs `$$...$$`:
-
-The Gaussian integral:
+高斯积分：
 
 ```bash
 $$ \int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi} $$
@@ -146,11 +144,11 @@ $$
 
 ---
 
-## Using Mathematical Symbols
+## 使用数学符号
 
-LaTeX provides a wide range of mathematical symbols:
+LaTeX 提供了种类繁多的数学符号：
 
-- Greek letters: `$\alpha$`, `$\beta$`, `$\gamma$`, `$\delta$`, `$\epsilon$`, `$\pi$`
-- Operators: `$\sum$`, `$\prod$`, `$\int$`, `$\partial$`, `$\nabla$`
-- Relations: `$\leq$`, `$\geq$`, `$\approx$`, `$\sim$`, `$\propto$`
-- Logical symbols: `$\forall$`, `$\exists$`, `$\neg$`, `$\wedge$`, `$\vee$`
+- Greek letters希腊字母: `$\alpha$`, `$\beta$`, `$\gamma$`, `$\delta$`, `$\epsilon$`, `$\pi$`
+- Operators操作员: `$\sum$`, `$\prod$`, `$\int$`, `$\partial$`, `$\nabla$`
+- Relations关系: `$\leq$`, `$\geq$`, `$\approx$`, `$\sim$`, `$\propto$`
+- Logical symbols逻辑符号: `$\forall$`, `$\exists$`, `$\neg$`, `$\wedge$`, `$\vee$`
