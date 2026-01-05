@@ -25,8 +25,9 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <main id="main-content" data-layout="index">
     <section id="hero" class="pt-8 pb-6">
       <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        满江红·写怀
+        待漏院记
       </h1>
+    #### 韦应物〔唐代〕
       <a
         target="_blank"
         href="/rss.xml"
@@ -43,19 +44,10 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       </a>
 
       <p>
-        怒发冲冠，凭栏处、潇潇雨歇。抬望眼，仰天长啸，壮怀激烈。三十功名尘与土，八千里路云和月。莫等闲，白了少年头，空悲切！
-
-靖康耻，犹未雪。臣子恨，何时灭！驾长车，踏破贺兰山缺。壮志饥餐胡虏肉，笑谈渴饮匈奴血。待从头、收拾旧山河，朝天阙。
+        天道不言，而品物亨、岁功成者，何谓也？四时之吏，五行之佐，宣其气矣。圣人不言而百姓亲、万邦宁者，何谓也？三公论道，六卿分职，张其教矣。是知君逸于上，臣劳于下，法乎天也。古之善相天下者，自皋、夔至房、魏，可数也，是不独有其德，亦皆务于勤耳，况夙兴夜寐，以事一人。卿大夫犹然，况宰相乎！
+        <font color=green>天道不说话，而万物却能顺利生长，年年有所收成，这是为什么呢？那是由于掌握四时、五行的天官们使风雨调畅的结果。皇帝不说话，而人民和睦相亲，四方万国安宁，这是为什么呢？那是由于三公商讨了治国纲要，六卿职责分明，伸张了皇帝的教化的结果。所以我们知道，国君在上清闲安逸，臣子在下勤于王事，这就是效法天道。古代的贤相名臣善于治理国家的，从皋陶、夔到房玄龄、魏征，是屈指可数的。这些人不但有德行，而且都勤劳不懈。早起晚睡为国君效力，连卿大夫都是如此，何况宰相呢！</font>
       </p>
-      <p class="mt-2">
-        Read the blog posts or check
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
-      </p>
+     
       {
         // only display if at least one social link is enabled
         SOCIALS.length > 0 && (
